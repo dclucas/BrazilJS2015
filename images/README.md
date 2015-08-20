@@ -1,0 +1,1 @@
+All images in this diretory are under CC Attribution-ShareAlike 4.0 International
