@@ -127,8 +127,7 @@
 	<mtr><mtd><mtext>simple</mtext></mtd></mtr>
 	<mtr><mtd><mtext>composable</mtext></mtd></mtr>
 	<mtr><mtd><mtext>scalable</mtext></mtd></mtr>
-	<mtr><mtd><mtext>expressive</mtext></mtd></mtr>
-	<mtr><mtd><mtext>standardized</mtext></mtd></mtr>
+	<mtr><mtd><mtext>open</mtext></mtd></mtr>
 </mtable>
 </mfenced>
 </math>
@@ -142,6 +141,7 @@
 									<li>simple</li>
 									<li>composable</li>
 									<li>expressive</li>
+									<li>open</li>
 								</ul>
 							</span>
 							<img src="./images/rest-vs-soap.png" style="vertical-align: middle; margin-left: 150px" height="500px" />
@@ -168,7 +168,7 @@
 									<li><strong>no</strong> bikeshedding</li>
 								</ul>
 							</span>
-							<img src="./images/xkcd-standards.png" style="vertical-align: middle; margin-left: 100px" width="550px" />
+							<img src="./images/xkcd-standards.png" style="vertical-align: middle; margin-left: 100px" width="500px" />
 						</div>
 					</section>
 					<section>
@@ -191,9 +191,10 @@
 	<mtr><mtd><mtext>scalable</mtext></mtd></mtr>
 	<mtr><mtd><mtext>expressive</mtext></mtd></mtr>
 	<mtr><mtd><mtext>standardized</mtext></mtd></mtr>
+	<mtr><mtd><mtext>open</mtext></mtd></mtr>
 </mtable>
 </mfenced>
-</math>					
+</math>
 						
 					</section>
 				</section>
@@ -206,15 +207,15 @@ harvester({
     connectionString: "mongodb://localhost:27017/test"
     })
     .resource('artists', {
-        name: Joi.string().required().description('Artist name')
+        name: Types.string().required().description('Artist name')
         links: {
         	genre: 'genres'
         }
     })
     .resource('genres', {
-        name: Joi.string()
+        name: Types.string()
     })
-    .listen(1730);					
+    .listen(1730);
 					</code>
 				</pre>					
 				</section>
@@ -236,8 +237,8 @@ harvester({
 					</section>
 					<section>
 						<ul>
-							<li>Aggregations</li>
-							<li>Primary and linked resource filtering interop</li>
+							<li>aggregations</li>
+							<li>primary and linked resource filtering interop</li>
 							<li>JSON API feature interop</li>
 						</ul>						
 					</section>
@@ -249,7 +250,6 @@ harvester({
 					</section>
 					<section><p>devops practices as enablers</p></section>
 					<section><p>break the heavy, bloated cycle</p></section>
-					<section><p>fullstack js: great, but no silver bullet</p></section>
 					<section>
 						<p>promises: easy to make, hard to keep.</p>
 						<p>definitely worth it, though</p>
@@ -262,12 +262,28 @@ harvester({
 				<section>
 					<section><h2>the road ahead</h2></section>
 					<section>
-						<ul>
-							<li>DSL improvements</li>
-							<li>JSON API 1.0 compliance</li>
-							<li>strengthening of our API strategy</li>
-							<li>machines as APIs</li>
-						</ul>
+<math>
+<mtext>*.harvester.js</mtext>
+<mfenced open="{" close="">
+<mtable>
+	<mtr><mtd><mtext>DSL improvements</mtext></mtd></mtr>
+	<mtr><mtd><mtext>Swagger generation</mtext></mtd></mtr>
+	<mtr><mtd><mtext>JSON API 1.0 compliance</mtext></mtd></mtr>
+</mtable>
+</mfenced>
+</math>						
+					</section>
+					<section>
+<math>
+<mtext>AGCO APIs</mtext>
+<mfenced open="{" close="">
+<mtable>
+	<mtr><mtd><mtext>broaden</mtext></mtd></mtr>
+	<mtr><mtd><mtext>strengthen</mtext></mtd></mtr>
+	<mtr><mtd><mtext>machines as APIs</mtext></mtd></mtr>
+</mtable>
+</mfenced>
+</math>						
 					</section>
 				</section>
 				<section>
