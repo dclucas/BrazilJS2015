@@ -62,30 +62,9 @@
 					</section>
 					<section><img src="./images/fuse.jpg" alt="FUSE" height="213px" /></section>					
 				</section>
-				<!--
 				<section>
 					<section>
-						<h2>1999-2013</h2>
-						<p><em>flirting</em></p>
-					</section>
-					<section>
-						<em>Oh, yeah, it's that web thingie...</em>
-					</section>
-					<section>
-						<p>but some important things were put in motion...</p>
-						<p class="fragment">new vision</p>
-						<p class="fragment">new team</p>
-					</section>
-					<section>
-						<p><em>oh, and also</em></p>
-					</section>
-					<section><img src="./images/fuse.jpg" alt="FUSE" height="213px" /></section>
-				</section>
-				-->
-				<section>
-					<section>
-						<h2><em>dating<em></h2>
-						<p>(2014)</p>
+						<h2>dating (2014)</h2>
 					</section>
 					<section>
 						<p><em>breaking monoliths apart</em></p>
@@ -110,12 +89,6 @@
 						</div>
 					</section>
 					<section>
-						<p>a lesson from the past...</p>
-					</section>
-					<section>
-						<img src="./images/javascript-vs-java.png" height="700px" />
-					</section>
-					<section>
 <math>
 <mtext>the new modules</mtext>
 <mfenced open="{" close="">
@@ -131,9 +104,9 @@
 <mtext>the results</mtext>
 <mfenced open="{" close="">
 <mtable>
+	<mtr><mtd><mtext>Improved UX</mtext></mtd></mtr>
 	<mtr><mtd><mtext>Fast prototyping</mtext></mtd></mtr>
 	<mtr><mtd><mtext>Good productivity</mtext></mtd></mtr>
-	<mtr><mtd><mtext>Improved UX</mtext></mtd></mtr>
 	<mtr><mtd><mtext>New standard</mtext></mtd></mtr>
 	<mtr><mtd><mtext>Global adoption</mtext></mtd></mtr>
 </mtable>
@@ -143,8 +116,7 @@
 				</section>
 				<section>
 					<section>
-						<h2><em>marriage</em></h2>
-						<p>(2015)</p>
+						<h2>marriage (2015)</h2>
 					</section>
 					<section><p>remember FUSE?</p></section>
 					<section>
@@ -159,7 +131,7 @@
 	<mtr><mtd><mtext>standardized</mtext></mtd></mtr>
 </mtable>
 </mfenced>
-</math>					
+</math>
 					</section>
 					<section>weapons of choice</section>
 					<section>
@@ -172,11 +144,98 @@
 									<li>expressive</li>
 								</ul>
 							</span>
-							<img src="./images/rest-vs-soap.png" style="vertical-align: middle" height="700px" />
+							<img src="./images/rest-vs-soap.png" style="vertical-align: middle; margin-left: 150px" height="500px" />
 						</div>
-
+					</section>
+					<section>
+						<h3>node.js + mongo</h3>
+						<ul>
+							<li>simple</li>
+							<li>scalable</li>
+							<li>expressive</li>
+						</ul>
+					</section>
+					<section>
+						<img src="./images/javascript-vs-java.png" height="700px" />
+					</section>
+					<section>
+						<h3>JSON API spec</h3>
+						<div style="display:inline-block;">
+							<span>
+								<ul>
+									<li>composable</li>
+									<li>standardized</li>
+									<li><strong>no</strong> bikeshedding</li>
+								</ul>
+							</span>
+							<img src="./images/xkcd-standards.png" style="vertical-align: middle; margin-left: 100px" width="550px" />
+						</div>
+					</section>
+					<section>
+						<img src="./images/bikeshedding00.png" style="vertical-align: middle" width="1000px" />
+					</section>
+					<section>
+						<img src="./images/bikeshedding01.png" style="vertical-align: middle" width="1000px" />
 					</section>
 				</section>
+				<section>
+					<section><h2>fruits of this union</h2></section>
+					<section><h3>harvester.js</h3></section>
+					<section>
+<math>
+<mtext>goals</mtext>
+<mfenced open="{" close="">
+<mtable>
+	<mtr><mtd><mtext>simple</mtext></mtd></mtr>
+	<mtr><mtd><mtext>composable</mtext></mtd></mtr>
+	<mtr><mtd><mtext>scalable</mtext></mtd></mtr>
+	<mtr><mtd><mtext>expressive</mtext></mtd></mtr>
+	<mtr><mtd><mtext>standardized</mtext></mtd></mtr>
+</mtable>
+</mfenced>
+</math>					
+						
+					</section>
+				</section>
+				<section>
+				<h3>A sample API</h3>
+				<pre>
+					<code data-trim contenteditable>
+harvester({
+    adapter: 'mongodb',
+    connectionString: "mongodb://localhost:27017/test"
+    })
+    .resource('artists', {
+        name: Joi.string().required().description('Artist name')
+        links: {
+        	genre: 'genres'
+        }
+    })
+    .resource('genres', {
+        name: Joi.string()
+    })
+    .listen(1730);					
+					</code>
+				</pre>					
+				</section>
+				<section>
+					<em>neat, you have CRUD. What else?</em>
+				</section>
+				<section>
+					<ul>
+						<li>link inclusion</li>
+						<li>filtering</li>
+						<li>sparse fieldsets</li>
+						<li>cross-domain inclusions</li>
+						<li>data event streams</li>
+					</ul>
+				</section>
+				<section>
+					<h3>elastic harvester.js</h3>
+				</section>
+				<section>
+				</section>
+				<!--
 				<section data-markdown>
 					<script type="text/template">
 						## Markdown support
@@ -235,7 +294,6 @@
 					<h2>Themes</h2>
 					<p>
 						reveal.js comes with a few themes built in: <br>
-						<!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
 						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black (default)</a> -
 						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a> -
 						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;">League</a> -
@@ -447,6 +505,7 @@ Reveal.addEventListener( 'customevent', function() {
 						- <a href="https://github.com/hakimel/reveal.js">Source code &amp; documentation</a>
 					</p>
 				</section>
+				-->
 
 			</div>
 
